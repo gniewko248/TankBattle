@@ -1,46 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<ItemGroup>
-		<None Include="..\..\TankBattle.uproject" />
-		<Filter Include="Source">
-			<UniqueIdentifier>{B3BD0BDB-0247-49C2-A978-469B333050F6}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\TankBattle.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<None Include="..\..\Source\TankBattleEditor.Target.cs">
-			<Filter>Source</Filter>
-		</None >
-		<Filter Include="Config">
-			<UniqueIdentifier>{7D5EA38C-78FA-433D-AA2A-E5F759FC0E87}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Config\DefaultEditor.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultEngine.ini">
-			<Filter>Config</Filter>
-		</None >
-		<None Include="..\..\Config\DefaultGame.ini">
-			<Filter>Config</Filter>
-		</None >
-		<Filter Include="Source\TankBattle">
-			<UniqueIdentifier>{B0210248-6D4E-41B4-B283-B1274C0D6C89}</UniqueIdentifier>
-		</Filter>
-		<None Include="..\..\Source\TankBattle\TankBattle.Build.cs">
-			<Filter>Source\TankBattle</Filter>
-		</None >
-		<ClCompile Include="..\..\Source\TankBattle\TankBattle.cpp">
-			<Filter>Source\TankBattle</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TankBattle\TankBattle.h">
-			<Filter>Source\TankBattle</Filter>
-		</ClInclude >
-		<ClCompile Include="..\..\Source\TankBattle\TankBattleGameModeBase.cpp">
-			<Filter>Source\TankBattle</Filter>
-		</ClCompile >
-		<ClInclude Include="..\..\Source\TankBattle\TankBattleGameModeBase.h">
-			<Filter>Source\TankBattle</Filter>
-		</ClInclude >
-	</ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\TankBattle.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{C79F0EA6-72FE-4043-ACF6-41D8A6E59FFE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TankBattle.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TankBattleEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{3596AE5C-DA25-4403-823C-7B10ED84573D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\TankBattle">
+      <UniqueIdentifier>{64A5B3D3-123E-4AFC-89E3-3A00E30FD301}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TankBattle\TankBattle.Build.cs">
+      <Filter>Source\TankBattle</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TankBattle\TankBattle.cpp">
+      <Filter>Source\TankBattle</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TankBattle\TankBattle.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TankBattle\TankBattleGameModeBase.cpp">
+      <Filter>Source\TankBattle</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TankBattle\TankBattleGameModeBase.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TankBattle\TankPlayerController.cpp">
+      <Filter>Source\TankBattle</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TankBattle\TankPlayerController.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\TankBattle\Tank.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\TankBattle\Tank.cpp">
+      <Filter>Source\TankBattle</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
