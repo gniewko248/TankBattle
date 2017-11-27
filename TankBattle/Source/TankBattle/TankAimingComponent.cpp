@@ -2,7 +2,6 @@
 
 #include "TankAimingComponent.h"
 #include "TankBarrel.h"
-#include "Components/ActorComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/World.h"
@@ -37,12 +36,14 @@ void UTankAimingComponent::AimAt(FVector HitLocation, float LaunchSpeed)
 		StartLocation,
 		HitLocation,
 		LaunchSpeed,
+		false,
+		0,
+		0,
 		ESuggestProjVelocityTraceOption::DoNotTrace)
 		)
 	{
 		auto AimDirection = OutLaunchVelocity.GetSafeNormal(); //convert to unit vector
 		MoveBarrelTowards(AimDirection);
-		UE_LOG(LogTemp, Warning, TEXT("Firing at: %s"), *AimDirection.ToString())
 	}
 }
 
@@ -51,9 +52,11 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 	auto BarrelRotator = Barrel->GetForwardVector().Rotation();
 	auto AimAsRotator = AimDirection.Rotation();
 	auto DeltaRotator = AimAsRotator - BarrelRotator;
-	UE_LOG(LogTemp, Warning, TEXT("AimAsRotator: %s"), *AimAsRotator.ToString());
 
-	Barrel->Elevate(5);
+	auto Time = GetWorld()->GetTimeSeconds();
+	UE_LOG(LogTemp, Warning, TEXT("%f"), Time);
+
+	Barrel->Elevate(DeltaRotator.Pitch);
 
 
 }
