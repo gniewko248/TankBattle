@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Engine/World.h"
 #include "Tank.h"
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
@@ -20,12 +21,26 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
+private:		
+	UPROPERTY(EditAnywhere)
+		float CrosshairXLocation = 0.5f;
+
+	UPROPERTY(EditAnywhere)
+		float CrosshairYLocation = 0.33333f;
+
+	float LineTraceRange = 1000000.0f;
+
 	virtual void Tick(float DeltaTime) override;
-	
+
 	ATank* GetControlledTank() const;
 
+	void AimTowardsCrosshair();
+
+	bool GetSightRayHitLocation(FVector&) const;
+	
+	bool ATankPlayerController::GetLookDirection(FVector2D, FVector&) const;
+
+	bool GetLookVectorHitLocation(FVector, FVector&) const;
 	
 	
 };
