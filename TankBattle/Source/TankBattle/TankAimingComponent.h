@@ -3,12 +3,9 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/ActorComponent.h"
-#include "Components/StaticMeshComponent.h"
-#include "Kismet/GameplayStatics.h"
-#include "Engine/World.h"
 #include "TankAimingComponent.generated.h"
 
+class UTankBarrel;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class TANKBATTLE_API UTankAimingComponent : public UActorComponent
@@ -19,7 +16,7 @@ public:
 	// Sets default values for this component's properties
 	UTankAimingComponent();
 
-	void SetBarrelReverence(UStaticMeshComponent*);
+	void SetBarrelReverence(UTankBarrel*);
 
 protected:
 
@@ -28,7 +25,7 @@ public:
 	void AimAt(FVector, float);
 
 private:
-	UStaticMeshComponent* Barrel = nullptr;
+	UTankBarrel *Barrel = nullptr;
 
 	void MoveBarrelTowards(FVector);
 		

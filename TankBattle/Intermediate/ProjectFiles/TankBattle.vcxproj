@@ -419,8 +419,10 @@
     <ClInclude Include="..\..\Source\TankBattle\TankAIController.h" />
     <None Include="..\..\Source\TankBattle\TankBattle.Build.cs" />
     <ClCompile Include="..\..\Source\TankBattle\TankAimingComponent.cpp" />
+    <ClCompile Include="..\..\Source\TankBattle\TankBarrel.cpp" />
     <ClCompile Include="..\..\Source\TankBattle\TankBattle.cpp" />
     <ClInclude Include="..\..\Source\TankBattle\TankAimingComponent.h" />
+    <ClInclude Include="..\..\Source\TankBattle\TankBarrel.h" />
     <ClInclude Include="..\..\Source\TankBattle\TankBattle.h" />
     <ClCompile Include="..\..\Source\TankBattle\TankBattleGameModeBase.cpp" />
     <ClInclude Include="..\..\Source\TankBattle\TankBattleGameModeBase.h" />
