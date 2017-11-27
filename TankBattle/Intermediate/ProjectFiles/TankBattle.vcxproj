@@ -406,6 +406,8 @@
     <NMakeOutput>..\..\Binaries\HTML5\TankBattle-HTML5-Shipping.js</NMakeOutput>
   </PropertyGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\TankBattle\TankTurret.cpp" />
+    <ClInclude Include="..\..\Source\TankBattle\TankTurret.h" />
     <None Include="..\..\TankBattle.uproject" />
     <None Include="..\..\Source\TankBattle.Target.cs" />
     <None Include="..\..\Source\TankBattleEditor.Target.cs" />
