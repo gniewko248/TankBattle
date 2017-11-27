@@ -16,10 +16,17 @@ public:
 	// Sets default values for this pawn's properties
 	ATank();
 
+	UFUNCTION(BlueprintCallable, Category = Setup)
+	void SetBarrelReference(UStaticMeshComponent* BarrelToSet);
+
+	UPROPERTY(EditAnywhere, Category = Firing)
+		float LaunchSpeed = 4000.0f; //TODO find reasonable value
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UTankAimingComponent* TankAimingComponent = nullptr;
 	
 
 public:	
