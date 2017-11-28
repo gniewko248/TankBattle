@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\TankBattle.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{4DB98F98-DFAE-481E-9B48-5CCFFD18478A}</UniqueIdentifier>
+      <UniqueIdentifier>{5690A1A0-0FFB-4EBE-A422-206894B6A3A7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\TankBattle.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{34E303B4-8546-47B7-AA1A-7C1E9976F46C}</UniqueIdentifier>
+      <UniqueIdentifier>{B5DC1DCF-F9FF-4659-B4D5-9A2BFAB51D60}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,8 +27,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\TankBattle">
-      <UniqueIdentifier>{E4898B93-61C9-4C5A-984D-6A7E7A46E44F}</UniqueIdentifier>
+      <UniqueIdentifier>{79ADAD0A-C96B-4A65-9619-3D50550DDDE7}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TankBattle\Projectile.cpp">
+      <Filter>Source\TankBattle</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TankBattle\Projectile.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TankBattle\Tank.cpp">
       <Filter>Source\TankBattle</Filter>
     </ClCompile>
@@ -39,6 +45,18 @@
       <Filter>Source\TankBattle</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TankBattle\TankAIController.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TankBattle\TankAimingComponent.cpp">
+      <Filter>Source\TankBattle</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TankBattle\TankAimingComponent.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TankBattle\TankBarrel.cpp">
+      <Filter>Source\TankBattle</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TankBattle\TankBarrel.h">
       <Filter>Source\TankBattle</Filter>
     </ClInclude>
     <None Include="..\..\Source\TankBattle\TankBattle.Build.cs">
@@ -62,33 +80,27 @@
     <ClInclude Include="..\..\Source\TankBattle\TankPlayerController.h">
       <Filter>Source\TankBattle</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\TankBattle\TankAimingComponent.h">
-      <Filter>Source\TankBattle</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TankBattle\TankBarrel.h">
-      <Filter>Source\TankBattle</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TankBattle\TankTurret.h">
-      <Filter>Source\TankBattle</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\TankBattle\Projectile.h">
-      <Filter>Source\TankBattle</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\TankBattle\TankAimingComponent.cpp">
-      <Filter>Source\TankBattle</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\TankBattle\TankBarrel.cpp">
-      <Filter>Source\TankBattle</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\TankBattle\TankTurret.cpp">
       <Filter>Source\TankBattle</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\TankBattle\Projectile.cpp">
+    <ClInclude Include="..\..\Source\TankBattle\TankTurret.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\TankBattle\TankTrack.cpp">
       <Filter>Source\TankBattle</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\TankBattle\TankMovementComponent.cpp">
+      <Filter>Source\TankBattle</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\TankBattle\TankTrack.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\TankBattle\TankMovementComponent.h">
+      <Filter>Source\TankBattle</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
