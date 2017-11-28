@@ -22,6 +22,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = Setup)
 	void SetBarrelReference(UTankBarrel* BarrelToSet);
 
+	UFUNCTION(BlueprintCallable)
+		void Fire();
+
 	UFUNCTION(BlueprintCallable, Category = Setup)
 		void SetTurretReference(UTankTurret* TurretToSet);
 
@@ -42,6 +45,12 @@ public:
 
 	void AimAt(FVector);
 
+private:
+
+	UPROPERTY(EditAnywhere, Category = Setup)
+		UClass* ProjectileBlueprint; 
+
+	UTankBarrel* Barrel = nullptr;
 	
 	
 };

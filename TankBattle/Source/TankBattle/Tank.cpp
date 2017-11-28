@@ -2,7 +2,9 @@
 
 #include "Tank.h"
 #include "TankBarrel.h"
+#include "Projectile.h"
 #include "TankTurret.h"
+#include "Engine/World.h"
 #include "TankAimingComponent.h"
 
 
@@ -19,6 +21,15 @@ ATank::ATank()
 void ATank::SetBarrelReference(UTankBarrel * BarrelToSet)
 {
 	TankAimingComponent->SetBarrelReference(BarrelToSet);
+	Barrel = BarrelToSet;
+}
+
+void ATank::Fire()
+{
+	if (!Barrel) { return; }
+
+	GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint, Barrel->GetSocketLocation(FName("Projectile")), Barrel->GetSocketRotation(FName("Projectile")));
+	UE_LOG(LogTemp, Warning, TEXT("FIRE!"))
 }
 
 void ATank::SetTurretReference(UTankTurret * TurretToSet)
