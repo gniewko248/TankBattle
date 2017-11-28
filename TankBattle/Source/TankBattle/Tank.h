@@ -6,7 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
-class UTankMovementComponent;
+class UTankMovementComponent;  //line 2/3 which removal causes crashing
 class UTankAimingComponent;
 class UTankBarrel;
 class UTankTurret;
@@ -39,7 +39,7 @@ protected:
 	UTankAimingComponent* TankAimingComponent = nullptr;
 
 	UPROPERTY(BlueprintReadOnly)
-	UTankMovementComponent* TankMovementComponent = nullptr;
+	UTankMovementComponent* TankMovementComponent = nullptr;  //line 3/3 which removal causes crashing
 	
 
 public:	

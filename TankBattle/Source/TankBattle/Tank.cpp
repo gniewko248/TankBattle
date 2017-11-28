@@ -6,7 +6,7 @@
 #include "TankTurret.h"
 #include "Engine/World.h"
 #include "TankAimingComponent.h"
-#include "TankMovementComponent.h"
+#include "TankMovementComponent.h" //line 1/3 which removal causes crashing
 
 
 // Sets default values
