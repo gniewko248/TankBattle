@@ -18,8 +18,8 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void IntendMoveForward(float Throw);
 
-	//UFUNCTION(BlueprintCallable)
-	//void Initialise(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet);
+	UFUNCTION(BlueprintCallable)
+	void Initialise(UTankTrack* LeftTrackToSet, UTankTrack* RightTrackToSet);
 
 private:
 	UTankTrack* LeftTrack = nullptr;

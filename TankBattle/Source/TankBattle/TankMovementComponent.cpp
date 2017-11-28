@@ -7,3 +7,10 @@ void UTankMovementComponent::IntendMoveForward(float Throw)
 	//auto Name = GetName();
 	UE_LOG(LogTemp, Warning, TEXT("Intend move forward throw: %f"), Throw)
 }
+
+void UTankMovementComponent::Initialise(UTankTrack * LeftTrackToSet, UTankTrack * RightTrackToSet)
+{
+	if (!LeftTrackToSet || !RightTrackToSet) { return; }
+	LeftTrack = LeftTrackToSet;
+	RightTrack = RightTrackToSet;
+}
