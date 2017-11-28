@@ -6,7 +6,7 @@
 #include "AIController.h"
 #include "TankAIController.generated.h"
 
-class ATank;
+
 
 UCLASS()
 class TANKBATTLE_API ATankAIController : public AAIController
@@ -16,13 +16,5 @@ class TANKBATTLE_API ATankAIController : public AAIController
 	virtual	void BeginPlay() override; //public if you want to inherit from this class
 
 	virtual void Tick(float DeltaTime) override; 
-
-	ATank* GetControlledTank() const;
-
-	ATank* GetPlayerTank() const;
-
-
-	
-	
 	
 };
