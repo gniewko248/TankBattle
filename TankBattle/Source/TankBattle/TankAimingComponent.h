@@ -9,6 +9,14 @@
 class UTankBarrel;
 class UTankTurret;
 
+UENUM()
+enum class EFiringState : uint8 
+{
+	Reloading,
+	Aiming,
+	Locked
+};
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class TANKBATTLE_API UTankAimingComponent : public UActorComponent
 {
@@ -18,11 +26,12 @@ public:
 	// Sets default values for this component's properties
 	UTankAimingComponent();
 
-	void SetTurretReference(UTankTurret*);
-
-	void SetBarrelReference(UTankBarrel*);
+	UFUNCTION(BlueprintCallable)
+		void Initialize(UTankBarrel* BarrelToSet, UTankTurret* TurretToSet);
 
 protected:
+	UPROPERTY(BlueprintReadOnly, Category = "State")
+		EFiringState FiringState = EFiringState::Aiming;
 
 public:	
 
@@ -34,5 +43,6 @@ private:
 	UTankTurret* Turret = nullptr;
 
 	void MoveBarrelTowards(FVector);
+
 	
 };

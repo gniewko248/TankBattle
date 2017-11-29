@@ -6,6 +6,7 @@
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
 
+class UTankAimingComponent;
 class ATank;
 
 UCLASS()
@@ -18,6 +19,12 @@ public:
 	ATankPlayerController();
 
 protected:
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+		ATank* GetControlledTank() const;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "Setup")
+		void FoundAimingComponent(UTankAimingComponent* AimingComp);
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -32,7 +39,6 @@ private:
 
 	virtual void Tick(float DeltaTime) override;
 
-	ATank* GetControlledTank() const;
 
 	void AimTowardsCrosshair();
 

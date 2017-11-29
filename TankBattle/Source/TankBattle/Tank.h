@@ -6,7 +6,6 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
-class UTankMovementComponent;  //line 2/3 which removal causes crashing
 class UTankAimingComponent;
 class UTankBarrel;
 class UTankTurret;
@@ -20,39 +19,30 @@ public:
 	// Sets default values for this pawn's properties
 	ATank();
 
-	UFUNCTION(BlueprintCallable, Category = Setup)
-	void SetBarrelReference(UTankBarrel* BarrelToSet);
-
 	UFUNCTION(BlueprintCallable)
 		void Fire();
 
-	UFUNCTION(BlueprintCallable, Category = Setup)
-		void SetTurretReference(UTankTurret* TurretToSet);
-
-	UPROPERTY(EditDefaultsOnly, Category = Firing)
+	UPROPERTY(EditDefaultsOnly, Category = "Firing")
 		float LaunchSpeed = 4000.0f; //TODO find reasonable value
 
-protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UTankAimingComponent* TankAimingComponent = nullptr;
+protected:
+
 
 	UPROPERTY(BlueprintReadOnly)
-	UTankMovementComponent* TankMovementComponent = nullptr;  //line 3/3 which removal causes crashing
+	UTankAimingComponent* TankAimingComponent = nullptr;
+
 	
 
 public:	
-
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void AimAt(FVector);
 
 private:
 
 	UPROPERTY(EditDefaultsOnly, Category = Setup)
-		UClass* ProjectileBlueprint; 
+	UClass* ProjectileBlueprint; 
 
 	UTankBarrel* Barrel = nullptr;
 
