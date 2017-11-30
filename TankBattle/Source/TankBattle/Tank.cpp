@@ -31,6 +31,8 @@ void ATank::Fire()
 void ATank::BeginPlay()
 {
 	Super::BeginPlay(); //needed for blueprint beginplay to run
+
+	TankAimingComponent = FindComponentByClass<UTankAimingComponent>();
 }
 
 void ATank::AimAt(FVector HitLocation)
