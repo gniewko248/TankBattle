@@ -3,7 +3,6 @@
 #include "TankAIController.h"
 #include "Engine/World.h"
 #include "TankAimingComponent.h"
-#include "TankMovementComponent.h"
 
 void ATankAIController::BeginPlay()
 {
@@ -23,7 +22,7 @@ void ATankAIController::Tick(float DeltaTime)
 
 	auto AimingComponent = ControlledTank->FindComponentByClass<UTankAimingComponent>();
 	AimingComponent->AimAt(PlayerTank->GetActorLocation());
-	//TODO fix
-	//ControlledTank->Fire(); 
+
+	AimingComponent->Fire();
 }
 

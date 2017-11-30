@@ -29,6 +29,9 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void Initialize(UTankBarrel* BarrelToSet, UTankTurret* TurretToSet);
 
+	UFUNCTION(BlueprintCallable)
+		void Fire();
+
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "State")
 		EFiringState FiringState = EFiringState::Aiming;
@@ -47,5 +50,13 @@ private:
 
 	void MoveBarrelTowards(FVector);
 
+
+	UPROPERTY(EditDefaultsOnly, Category = Setup)
+		UClass* ProjectileBlueprint;
+
+	UPROPERTY(EditDefaultsOnly, Category = Firing)
+		double ReloadTimeInSeconds = 3.0f;
+
+	double LastFireTime = 0.0;
 	
 };
