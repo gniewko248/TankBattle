@@ -5,7 +5,6 @@
 #include "Projectile.h"
 #include "TankTurret.h"
 #include "Engine/World.h"
-#include "TankAimingComponent.h"
 
 
 // Sets default values
@@ -23,7 +22,7 @@ void ATank::Fire()
 	bool isReloaded = (FPlatformTime::Seconds() - LastFireTime) > ReloadTimeInSeconds;
 	if (ensure(Barrel && isReloaded)) {
 		auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileBlueprint, Barrel->GetSocketLocation(FName("Projectile")), Barrel->GetSocketRotation(FName("Projectile")));
-		Projectile->LaunchProjectile(LaunchSpeed);
+		Projectile->LaunchProjectile(4000);
 		LastFireTime = FPlatformTime::Seconds();
 	}
 }
@@ -31,13 +30,6 @@ void ATank::Fire()
 void ATank::BeginPlay()
 {
 	Super::BeginPlay(); //needed for blueprint beginplay to run
-
-	TankAimingComponent = FindComponentByClass<UTankAimingComponent>();
 }
 
-void ATank::AimAt(FVector HitLocation)
-{
-	if (!ensure(TankAimingComponent)) { return; }
-	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
-}
 
